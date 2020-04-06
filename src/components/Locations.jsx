@@ -12,7 +12,7 @@ class Locations extends Component {
 
   render() {
     return (
-      <h1>This is Page 2</h1>
+      <h1>Locations</h1>
     );
   }
 }

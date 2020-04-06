@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import Logo from '../assets/logo.png';
-
 import 'isomorphic-fetch';
 import 'es6-promise';
 import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import Films from './Films';
+import FilmID from './FilmID'
 import Locations from './Locations';
 import Home from './Home';
 
@@ -27,6 +27,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Home}/>
               <Route path="/films" component={Films} />
+              <Route path="/films/:id" component={FilmID}/>
               <Route path="/locations" component={Locations} />
             </Switch>
           </Fragment>

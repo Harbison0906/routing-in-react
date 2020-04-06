@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import FilmID from './FilmID';
+
 
 class Films extends Component {
   state = {
@@ -26,7 +28,7 @@ class Films extends Component {
                     <div className="card-body">
                       <h5 className="card-title">{movie.title}</h5>
                       <p className="card-text">{movie.description}</p>
-                      <a href={movie.url} target="_blank" rel="noopener noreferrer">Click here for more info on this film</a>
+                      <FilmID />
                     </div>
                   </div>
                 </div>
