@@ -5,7 +5,8 @@ import 'es6-promise';
 import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import Films from './Films';
 import FilmID from './FilmID'
-import Locations from './Locations';
+import People from './People';
+import Person from './Person';
 import Home from './Home';
 
 class App extends Component {
@@ -16,19 +17,20 @@ class App extends Component {
         <Router>
           <Fragment>
             <Link to="/">
-              <button className="m-3" type="submit">Go Home</button>
+              <button className="button-link" type="submit">Go Home</button>
             </Link>
             <Link to="/films">
-              <button className="m-3" type="submit">View Films</button>
+              <button className="button-link" type="submit">View Films</button>
             </Link>
-            <Link to="/locations">
-              <button className="m-3" type="submit">View Locations</button>
+            <Link to="/people">
+              <button className="button-link" type="submit">View People</button>
             </Link>
             <Switch>
               <Route exact path="/" component={Home}/>
-              <Route path="/films" component={Films} />
-              <Route path="/films/:id" component={FilmID}/>
-              <Route path="/locations" component={Locations} />
+              <Route exact path="/films" component={Films} />
+              <Route exact path="/films/:id" component={FilmID}/>
+              <Route exact path="/people" component={People} />
+              <Route exact path="/people/:id" component={Person} />
             </Switch>
           </Fragment>
         </Router>

@@ -1,6 +1,7 @@
 button {
   display: inline-block;
-  background-color: navy;
+  margin: 50px;
+  background-color: rgb(3, 3, 90);
   color: white;
 }
 
@@ -8,3 +9,5 @@ button {
   align-content: center;
   text-align: center;
 }
+
+
